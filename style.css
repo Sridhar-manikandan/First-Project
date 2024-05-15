@@ -1,0 +1,328 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+nav{
+    background-color: black;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+nav h1{
+    color: white;
+    font-size: 33px;
+    line-height: 100px;
+    position: absolute;
+    margin-left: 30px;
+}
+nav  ul{
+    float: right; 
+    line-height: 100px;
+    z-index: 1;  
+}
+nav ul li{
+    display: inline-block;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    margin-left:25px ;
+    
+}
+a:hover{
+    color: yellow;
+}
+#bar{
+    display: none;
+}
+
+#menu , #cancel , #search {
+    float: right;
+    line-height: 100px;
+    margin-left: 25px;
+    font-size: 25px;
+    margin-right: 20px;
+}
+#menu , #cancel {
+    display: none;
+}
+@media(max-width:800px){
+    #menu{
+        display: block;
+    }
+    nav ul{
+        background-color: black;
+        width: 100%;
+        position: fixed;
+        top: 100px;
+        right: -100%;
+        transition: .7s;
+        height: 100%;
+       
+    }
+    nav ul li{
+        display: block;
+        text-align: center;
+    }
+    #bar:checked ~ ul{
+       
+        right: 0;
+    }
+    #bar:checked ~ label #menu{
+        display: none;
+
+    }
+    #bar:checked ~ label #cancel{
+        display: block;
+    }
+}
+.content{
+    background-image: url("images/bg.jpeg");
+    background-size: 100% 100%;
+    height: 85vh;
+}
+.con{
+    position: absolute;
+    top: 35%;
+    left: 10%;
+
+}
+.con h2{
+    font-size: 65px;
+    
+    
+}
+.con h1{
+    color: white;
+    font-size: 75px;
+}
+.con  p{
+    font-size: 18px;
+    text-align: justify;
+    color: white;
+    padding: 10px;
+}
+.con button{
+    background-color: black;
+    color: white;
+    padding: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 10px;
+    border: none;
+
+}
+.about{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    justify-content: space-between;
+    width: 100%;
+}
+.about img{
+    height: 100%;
+    
+
+}
+.about div{
+    margin-top: 120px;
+    margin-left: 90px;
+}
+.item{
+    margin-top: 250px;
+}
+.item h1{
+    color: rgb(255, 123, 0);
+    font-size: 45px;
+    
+}
+.item  p{
+    font-size: 18px;
+    padding-top: 10px;
+    line-height: 25px;
+}
+.item button{
+    background-color: black;
+    color: white;
+    padding: 12px;
+    padding-left: 33px;
+    padding-right: 33px;
+    font-size: 17px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    
+}
+.menu-item{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+.menu img{
+    width: 350px;
+    height: 350px;
+    padding: 20px;
+}
+.menu h1{
+    text-align: center;
+    color: rgb(255, 123, 0);
+    font-size: 45px;
+    margin-top: 100px;
+}
+.menu p{
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.menu button{
+    background-color: black;
+    color: white;
+    padding: 12px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 17px;
+    margin-top: 10px;
+    border: none;
+    
+}
+.menu{
+    text-align: center;
+}
+.service{
+ background: url(images/bg1.jpeg);
+ padding: 2rem 0;
+  text-align: center;
+  margin: 5% 0;
+}
+.service h2{
+    font-size: 3rem;
+    color: #fff;
+}
+.service p{
+    color: #fff;
+}
+.coffee-item{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 1.5rem;
+    padding: 5rem;
+    
+}
+.service-item{
+    background-color: rgb(226, 101, 43);
+    text-align: center;
+    padding: 30px;
+        
+}
+.service-item i{
+    font-size: 90px; 
+    
+}
+.service h3{
+    font-size: 30px;
+    color: white;
+    padding: 15px 0;
+}
+.service-item p{
+    color: white;
+}
+.contact{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    
+}
+.contact-item{
+    background-image: url(images/pic9.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    background-color:red;
+    
+
+}
+.contact-item input{
+    height: 4rem;
+    width: 25rem;
+    margin: 1.5rem 0;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    padding-left: 20px;
+    
+}
+.contact-item textarea{
+    width: 25rem;
+    height: 4rem ;
+    margin: 1.5rem 0;
+    order: none;
+    border-radius: 30px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+.contact-item button{
+    font-size: 1.5rem;
+    padding: 0.5rem  2rem;
+    background-color: red;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+.contact-map iframe{
+    width: 100%;
+    height: 100%;
+    
+}
+.contact-item h2{
+    color: #fff;
+    margin-top: 10px;
+}
+.map h1{
+    color:rgb(255, 123, 0) ;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+ 
+footer{
+    background-color: black;
+    padding: 5%;
+    
+
+}
+.foot{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 50px;
+
+}
+.foot-btn h2{
+    color: #fff;
+    
+}
+.foot-btn ul li{
+    color: #fff;
+    list-style: none;
+    line-height: 30px;
+
+}
+.foot-btn p{
+    color: #fff;
+}
+.foot-btn i{
+    margin-right: 15px;
+}
+
+
+    
+
+
+
+
+
+    
